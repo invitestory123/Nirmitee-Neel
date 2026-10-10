@@ -84,12 +84,12 @@ export const invitation = {
     contacts: [] as readonly { name: string; phone: string }[],
   },
   meta: {
-    title: "Nirmitee & Neel — Engagement Invitation",
+    title: "Nirmitee & Neel — Engagement Ceremony Invitation",
     description:
-      "Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
+      "Together with their families, Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on Friday, December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
     url: "https://nirmitee-neel.vercel.app",
-    image: "https://media.invitestory.in/sage-parchment/og-image.jpg",
-    siteName: "Nirmitee & Neel Engagement",
+    image: "/og-image.jpg",
+    siteName: "Nirmitee & Neel Engagement Ceremony",
   },
 } as const;
 

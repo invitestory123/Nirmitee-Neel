@@ -77,29 +77,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Nirmitee & Neel — Engagement Invitation" },
-      { name: "description", content: "A digital engagement invitation for Nirmitee & Neel." },
+      { title: "Nirmitee & Neel — Engagement Ceremony Invitation" },
+      {
+        name: "description",
+        content:
+          "Together with their families, Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on Friday, December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
+      },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Nirmitee & Neel — Engagement Invitation" },
+      { property: "og:title", content: "Nirmitee & Neel — Engagement Ceremony Invitation" },
       {
         property: "og:description",
         content:
-          "Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
+          "Together with their families, Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on Friday, December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
       },
-      { property: "og:image", content: "https://media.invitestory.in/sage-parchment/og-image.jpg" },
-      { property: "og:image:alt", content: "Nirmitee & Neel Engagement Invitation" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Nirmitee & Neel Engagement Ceremony Invitation" },
       { property: "og:url", content: "/" },
-      { property: "og:site_name", content: "Nirmitee & Neel Engagement" },
+      { property: "og:site_name", content: "Nirmitee & Neel Engagement Ceremony" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Nirmitee & Neel — Engagement Invitation" },
+      { name: "twitter:title", content: "Nirmitee & Neel — Engagement Ceremony Invitation" },
       {
         name: "twitter:description",
         content:
-          "Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
+          "Together with their families, Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on Friday, December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
       },
       {
         name: "twitter:image",
-        content: "https://media.invitestory.in/sage-parchment/og-image.jpg",
+        content: "/og-image.jpg",
       },
     ],
     links: [

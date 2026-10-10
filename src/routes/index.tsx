@@ -14,13 +14,15 @@ import { OpenGate } from "@/components/wedding/OpenGate";
 import { invitation } from "@/config/invitation";
 
 const { couple, event, venue, meta } = invitation;
-const title = meta?.title ?? `${couple.brideShort} & ${couple.groomShort} — Engagement Invitation`;
+const title =
+  meta?.title ?? `${couple.brideShort} & ${couple.groomShort} — Engagement Ceremony Invitation`;
 const description =
   meta?.description ??
-  `${couple.bride} and ${couple.groom} invite you to celebrate their engagement ceremony on ${event.dateLabel} at ${venue.name}, ${venue.address}.`;
+  `Together with their families, ${couple.bride} and ${couple.groom} cordially invite you to celebrate their engagement ceremony on ${event.dateLabel} at ${venue.name}.`;
 const ogUrl = meta?.url ?? "/";
-const ogImage = meta?.image ?? "https://media.invitestory.in/sage-parchment/og-image.jpg";
-const siteName = meta?.siteName ?? `${couple.brideShort} & ${couple.groomShort} Engagement`;
+const ogImage = meta?.image ?? "/og-image.jpg";
+const siteName =
+  meta?.siteName ?? `${couple.brideShort} & ${couple.groomShort} Engagement Ceremony`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,6 +34,8 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: ogUrl },
       { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: title },
       { property: "og:site_name", content: siteName },
       { name: "twitter:card", content: "summary_large_image" },
