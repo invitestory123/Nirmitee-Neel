@@ -22,7 +22,7 @@ export const invitation = {
     endsAt: "2026-12-25T23:00:00+05:30",
     dateLabel: "25 . 12 . 2026",
     dayLabel: "Friday",
-    timeLabel: "6:00 in the evening onwards",
+    timeLabel: "6:00 PM onwards",
     dressCode: "Traditional / Festive Indian Attire",
     note: "Celebrations & dinner to follow",
   },

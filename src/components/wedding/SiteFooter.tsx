@@ -28,7 +28,9 @@ export function SiteFooter() {
           {couple.brideShort} <span className="text-gold">&</span> {couple.groomShort}
         </p>
         <div className="mx-auto mt-5 w-24 gold-rule" />
-        <p className="mt-6 text-sm text-ink/80">{footer.families}</p>
+        <p className="mt-6 font-display text-2xl sm:text-3xl text-pine italic leading-relaxed">
+          {footer.families}
+        </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           {footer.contacts.map((c) => (
