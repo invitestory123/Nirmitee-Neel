@@ -19,8 +19,8 @@ const title =
 const description =
   meta?.description ??
   `Together with their families, ${couple.bride} and ${couple.groom} cordially invite you to celebrate their engagement ceremony on ${event.dateLabel} at ${venue.name}.`;
-const ogUrl = meta?.url ?? "/";
-const ogImage = meta?.image ?? "/og-image.jpg";
+const ogUrl = meta?.url ?? "https://nirmitee-neel.inviteby.top/";
+const ogImage = meta?.image ?? "https://nirmitee-neel.inviteby.top/og-image.jpg";
 const siteName =
   meta?.siteName ?? `${couple.brideShort} & ${couple.groomShort} Engagement Ceremony`;
 
@@ -34,8 +34,10 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: ogUrl },
       { property: "og:image", content: ogImage },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image:secure_url", content: ogImage },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "1024" },
       { property: "og:image:alt", content: title },
       { property: "og:site_name", content: siteName },
       { name: "twitter:card", content: "summary_large_image" },

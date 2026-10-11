@@ -87,8 +87,8 @@ export const invitation = {
     title: "Nirmitee & Neel — Engagement Ceremony Invitation",
     description:
       "Together with their families, Nirmitee and Neel cordially invite you to celebrate their engagement ceremony on Friday, December 25, 2026 at Amanora The Fern Pune, Series by Marriott.",
-    url: "https://nirmitee-neel.vercel.app",
-    image: "/og-image.jpg",
+    url: "https://nirmitee-neel.inviteby.top",
+    image: "https://nirmitee-neel.inviteby.top/og-image.jpg",
     siteName: "Nirmitee & Neel Engagement Ceremony",
   },
 } as const;
