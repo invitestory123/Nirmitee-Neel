@@ -11,6 +11,7 @@ import { SiteFooter } from "@/components/wedding/SiteFooter";
 import { Petals } from "@/components/wedding/Petals";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
 import { OpenGate } from "@/components/wedding/OpenGate";
+import { MusicPlayer } from "@/components/wedding/MusicPlayer";
 import { invitation } from "@/config/invitation";
 
 const { couple, event, venue, meta } = invitation;
@@ -71,6 +72,7 @@ export const Route = createFileRoute("/")({
 function InvitationPage() {
   return (
     <OpenGate>
+      <MusicPlayer />
       <main className="relative bg-parchment">
         <ScrollProgress />
         <Petals />

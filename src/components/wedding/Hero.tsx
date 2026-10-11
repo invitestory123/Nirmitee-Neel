@@ -36,84 +36,85 @@ export function Hero() {
       {/* Fixed bottom gradient to guarantee seamless transition to next section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-72 bg-gradient-to-t from-parchment via-parchment/95 via-60% to-transparent" />
 
-      <motion.div
-        style={{ y: textY }}
-        className="relative z-20 mt-auto w-full px-6 pt-24 pb-8 text-center"
-      >
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={opened ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-xs sm:text-sm font-semibold tracking-[0.24em] text-pine uppercase"
-        >
-          {invite.kicker}
-        </motion.p>
+      <div className="relative z-20 mt-auto flex w-full flex-col items-center px-6 pt-10 pb-5 sm:pb-7 text-center">
+        <motion.div style={{ y: textY }} className="w-full">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={opened ? { opacity: 1, y: 0 } : false}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-xs sm:text-sm font-semibold tracking-[0.24em] text-pine uppercase"
+          >
+            {invite.kicker}
+          </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 24, letterSpacing: "0.4em" }}
-          animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.16em" } : false}
-          transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-4 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
-        >
-          {couple.brideShort}
-          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
-            and
+          <motion.h1
+            initial={{ opacity: 0, y: 24, letterSpacing: "0.4em" }}
+            animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.16em" } : false}
+            transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="mx-auto mt-3.5 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
+          >
+            {couple.brideShort}
+            <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
+              and
+            </span>
+            {couple.groomShort}
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0.4 }}
+            animate={opened ? { opacity: 1, scaleX: 1 } : false}
+            transition={{ duration: 1.2, delay: 0.8 }}
+            className="mx-auto mt-5 w-48 gold-rule"
+          />
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={opened ? { opacity: 1 } : false}
+            transition={{ duration: 1, delay: 1 }}
+            className="mt-4 text-xs sm:text-sm text-ink/80"
+          >
+            {invite.line}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={opened ? { opacity: 1 } : false}
+            transition={{ duration: 1, delay: 1.15 }}
+            className="mt-3 font-display text-3xl tracking-[0.18em] text-gold"
+          >
+            {event.dateLabel}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={opened ? { opacity: 1 } : false}
+            transition={{ duration: 1, delay: 1.25 }}
+            className="mt-2 text-[0.72rem] tracking-[0.28em] text-ink/75 uppercase"
+          >
+            {venue.name}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={opened ? { opacity: 1 } : false}
+            transition={{ duration: 1, delay: 1.35 }}
+            className="mt-1 font-display text-base sm:text-lg italic text-ink/85"
+          >
+            {event.dayLabel}, {event.timeLabel}
+          </motion.p>
+        </motion.div>
+
+        <motion.div style={{ opacity: fade }} className="mt-5 sm:mt-6 text-center">
+          <span className="text-[0.68rem] tracking-[0.35em] text-ink/80 uppercase font-medium">
+            scroll
           </span>
-          {couple.groomShort}
-        </motion.h1>
-
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0.4 }}
-          animate={opened ? { opacity: 1, scaleX: 1 } : false}
-          transition={{ duration: 1.2, delay: 0.8 }}
-          className="mx-auto mt-6 w-52 gold-rule"
-        />
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-6 text-sm text-ink/80"
-        >
-          {invite.line}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.15 }}
-          className="mt-3 font-display text-3xl tracking-[0.18em] text-gold"
-        >
-          {event.dateLabel}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.25 }}
-          className="mt-1 font-display text-base sm:text-lg italic text-ink/80"
-        >
-          {event.dayLabel}, {event.timeLabel}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.35 }}
-          className="mt-2 text-[0.72rem] tracking-[0.28em] text-ink/70 uppercase"
-        >
-          {venue.name}
-        </motion.p>
-      </motion.div>
-
-      <motion.div style={{ opacity: fade }} className="relative z-20 pb-6 text-center">
-        <span className="text-[0.6rem] tracking-[0.3em] text-ink/60 uppercase">scroll</span>
-        <motion.div
-          animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="mx-auto mt-2 h-8 w-px bg-gold"
-        />
-      </motion.div>
+          <motion.div
+            animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            className="mx-auto mt-1.5 h-6 w-px bg-gold"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -36,8 +36,12 @@ export const invitation = {
     lng: 73.9351,
   },
   quote: {
-    line: "From walks around New International Hostel Manipal to a lifetime hand in hand — every step led us to each other.",
+    line: "From walks around New International Hostel, Manipal to a lifetime hand in hand — every step led us to each other.",
     attribution: "Nirmitee & Neel",
+  },
+  music: {
+    src: "/music.m4a",
+    title: "Jashn-E-Bahaaraa (Instrumental)",
   },
   storyTitle: "Our Story",
   storySubtitle: "From NIH Rounds to Forever ♡",

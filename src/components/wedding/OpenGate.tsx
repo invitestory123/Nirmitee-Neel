@@ -139,7 +139,10 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
 
         <motion.button
           type="button"
-          onClick={onOpen}
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("play-invitation-music"));
+            onOpen();
+          }}
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
