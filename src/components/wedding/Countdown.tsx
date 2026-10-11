@@ -54,10 +54,6 @@ export function Countdown() {
           ))}
         </div>
 
-        <p className="mt-6 font-display text-lg italic text-ink/70">
-          {invitation.event.dayLabel}, {invitation.event.timeLabel}
-        </p>
-
         {invitation.quote && (
           <div className="relative mx-auto mt-12 max-w-md overflow-hidden rounded-2xl border border-gold/45 bg-parchment-deep/60 px-6 py-7 shadow-[0_20px_40px_-30px_var(--color-ink)] paper-grain">
             <div className="pointer-events-none absolute inset-2.5 rounded-xl border border-gold/25" />

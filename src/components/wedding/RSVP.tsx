@@ -21,6 +21,8 @@ export function RSVP() {
   };
 
   const hasPhone = Boolean(rsvp.phone && rsvp.phone.trim().length > 0);
+  const cleanDigits = rsvp.phone.replace(/[^0-9]/g, "");
+  const waPhone = cleanDigits.length === 10 ? `91${cleanDigits}` : cleanDigits;
 
   return (
     <section className="relative px-5 py-20">
@@ -47,16 +49,16 @@ export function RSVP() {
           {hasPhone ? (
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
               <a
-                href={`https://wa.me/${rsvp.phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hi ${couple.brideShort} & ${couple.groomShort}, I am thrilled to attend your engagement ceremony!`)}`}
+                href={`https://wa.me/${waPhone}?text=${encodeURIComponent(`Hi ${couple.brideShort} & ${couple.groomShort}, I am thrilled to attend your engagement ceremony!`)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-pine px-6 py-3 text-[0.68rem] tracking-[0.2em] text-parchment uppercase transition-transform active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-pine px-6 py-3 text-[0.68rem] tracking-[0.2em] text-parchment uppercase transition-transform hover:brightness-110 active:scale-95 shadow-sm"
               >
                 <MessageCircle className="size-4 text-gold" aria-hidden />
-                WhatsApp RSVP
+                RSVP on WhatsApp
               </a>
               <a
-                href={`tel:${rsvp.phone}`}
+                href={`tel:${rsvp.phone.replace(/\s+/g, "")}`}
                 className="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-parchment/70 px-6 py-3 text-[0.68rem] tracking-[0.2em] text-ink/80 uppercase transition-colors hover:bg-gold/15 active:scale-95"
               >
                 <Phone className="size-4 text-gold" aria-hidden />

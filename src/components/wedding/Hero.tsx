@@ -44,7 +44,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={opened ? { opacity: 1, y: 0 } : false}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-[0.7rem] tracking-[0.42em] text-ink/70 uppercase"
+          className="text-xs sm:text-sm font-semibold tracking-[0.24em] text-pine uppercase"
         >
           {invite.kicker}
         </motion.p>
@@ -90,7 +90,16 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.3 }}
+          transition={{ duration: 1, delay: 1.25 }}
+          className="mt-1 font-display text-base sm:text-lg italic text-ink/80"
+        >
+          {event.dayLabel}, {event.timeLabel}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.35 }}
           className="mt-2 text-[0.72rem] tracking-[0.28em] text-ink/70 uppercase"
         >
           {venue.name}

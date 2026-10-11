@@ -36,7 +36,7 @@ export const invitation = {
     lng: 73.9351,
   },
   quote: {
-    line: "From walks around NIH to a lifetime hand in hand — every step led us to each other.",
+    line: "From walks around New International Hostel Manipal to a lifetime hand in hand — every step led us to each other.",
     attribution: "Nirmitee & Neel",
   },
   storyTitle: "Our Story",
@@ -70,8 +70,8 @@ export const invitation = {
   rsvp: {
     title: "RSVP",
     subtitle: "We would be honored by your gracious presence",
-    note: "Contact details will be announced soon. Kindly save the date!",
-    phone: "", // Will give number later in some time
+    note: "Kindly confirm your presence with us on WhatsApp or give us a call.",
+    phone: "+91 8217649056",
   },
   blessing: {
     line: "May your intentions be one, may your hearts beat as one.",

@@ -85,7 +85,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-[0.62rem] tracking-[0.45em] text-gold uppercase"
+          className="text-xs sm:text-sm font-medium tracking-[0.28em] text-gold uppercase drop-shadow-sm"
         >
           {invite.kicker}
         </motion.p>
